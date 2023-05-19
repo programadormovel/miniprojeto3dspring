@@ -11,10 +11,11 @@ import jakarta.persistence.Table;
 public class Produto {
 	
 	@Id
-	private long id;
 	@GeneratedValue(strategy =
-			GenerationType.IDENTITY)
-    private String nome;
+	GenerationType.IDENTITY)
+	private long id;
+	
+	private String nome;
     private String descricao;
     private String codigoBarras;
     private byte[] foto;
