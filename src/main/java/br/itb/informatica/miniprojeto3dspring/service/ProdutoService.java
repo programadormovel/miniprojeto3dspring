@@ -20,14 +20,14 @@ public class ProdutoService {
 	}
 	
 	// Método de inserção de dados
-	// Rota POST INSERT
+	// INSERT INTO PRODUTO VALUES (?,?)
 	@Transactional
 	public Produto save(Produto produto) {
 		return produtoRepository.save(produto);
 	}
 	
 	// Método de pesquisa de dados
-	// Rota GET select * from produto
+	// select * from produto
 	public List<Produto> findAll(){
 		List<Produto> listaProdutos = produtoRepository.findAll();
 		return listaProdutos;
